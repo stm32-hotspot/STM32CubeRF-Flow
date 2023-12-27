@@ -1,7 +1,12 @@
 from rf_flow import RFFlow
 from tester.litepoint import LitePoint
 from dut_link.usb_link import USBLink
+# noinspection PyUnresolvedReferences
 from dut.stm32wb import STM32WB
+# noinspection PyUnresolvedReferences
+from dut.stm32wba import STM32WBA
+# noinspection PyUnresolvedReferences
+from dut.bluenrg_lp import BlueNRG_LP
 
 
 if __name__ == '__main__':

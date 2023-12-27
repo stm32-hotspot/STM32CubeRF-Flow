@@ -26,6 +26,7 @@
 ## Documentation
 
 * STM32WB [HCI/ACI Commands](https://www.st.com/resource/en/application_note/an5270-stm32wb-bluetooth-low-energy-wireless-interface-stmicroelectronics.pdf)
+* STM32WBA HCI/ACI Commands (CubeWBA: Middlewares/ST/STM32_WPAN/ble/stack/doc/STM32WBA_BLE_Wireless_Interface.html)
 * BlueNRG [HCI/ACI Commands](https://www.st.com/resource/en/user_manual/um1865-the-bluenrgms-bluetooth-le-stack-application-command-interface-aci-stmicroelectronics.pdf)
 * LitePoint [SCPI Commands](https://www.litepoint.com/faq/where-is-iqxel-m-documentation/)
 
@@ -40,6 +41,8 @@
 
 * One DUT:
     * [P-NUCLEO-WB55](https://www.st.com/en/evaluation-tools/p-nucleo-wb55.html) (STM32WB55)
+
+    * [NUCLEO-WBA52](https://www.st.com/en/evaluation-tools/nucleo-wba52cg.html) (STM32WBA52)
 
     * [STEVAL-IDB011V2](https://www.st.com/en/evaluation-tools/steval-idb011v2.html) (BlueNRG-LP) [Limited Functionality]
 
@@ -59,6 +62,8 @@
 
 * DUT DTM (Direct Test Mode) FW:
     * STM32WB: BLE Transparent Mode in [CubeWB FW Package](https://www.st.com/en/embedded-software/stm32cubewb.html)
+  
+    * STM32WBA: BLE Transparent Mode in [CubeWBA FW Package](https://www.st.com/en/embedded-software/stm32cubewba.html)
     
     * BlueNRG: BLE DTM Uart in [BlueNRG-LP DK SW Package](https://www.st.com/en/embedded-software/stsw-bnrglp-dk.html)
 
@@ -94,7 +99,7 @@
 
     a) This is an example custom class that performs predefined RF Tests and will create a folder using the device's UID & a CSV file for each test.
 
-    > **Note:** Folder creation using the device's UID is supported only by the STM32WB. For the BlueNRG-LP, a folder with the name "unknown" will be created.
+    > **Note:** Folder creation using the device's UID is supported by the STM32WB & STM32WBA. For the BlueNRG-LP, a folder with the name "unknown" will be created.
 
     b) An example of the test results for a NUCLEO-WB55 can be found under [test_results](test_results/test_results_0000bcf8).
 
@@ -123,24 +128,28 @@
     a) STM32WB: BLE Transparent Mode + latest BLE Full Wireless Stack ([tutorial](https://youtu.be/1LvfBC_P6eg)) using CubeProgrammer.
 
     ![RM_IMAGE_10](Utilities/Media/RM_IMAGE_10.png)
-
-    b) BlueNRG-LP: BLE DTM UART using BlueNRG-LP Navigator. 
+    
+    b) STM32WBA: BLE Transparent Mode using CubeProgrammer.
 
     ![RM_IMAGE_11](Utilities/Media/RM_IMAGE_11.png)
 
-8) Connect the DUT, Tester, and PC.
+    c) BlueNRG-LP: BLE DTM UART using BlueNRG-LP Navigator. 
 
     ![RM_IMAGE_12](Utilities/Media/RM_IMAGE_12.png)
+
+8) Connect the DUT, Tester, and PC.
+
+    ![RM_IMAGE_13](Utilities/Media/RM_IMAGE_13.png)
 
 9) Run the Python application.
 
     a) If using the predefined RF Tests, a folder will be generated in [test_results](test_results) with a csv file for each test. The test progress will also be printed out on the console.
 
-    ![RM_IMAGE_13](Utilities/Media/RM_IMAGE_13.png)
+    ![RM_IMAGE_14](Utilities/Media/RM_IMAGE_14.png)
 
     b) The application can also be ran in the Command Prompt using the 'python main.py' command.
 
-    ![RM_IMAGE_14](Utilities/Media/RM_IMAGE_14.png)
+    ![RM_IMAGE_15](Utilities/Media/RM_IMAGE_15.png)
 
 ## Troubleshooting
 
