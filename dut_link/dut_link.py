@@ -11,7 +11,8 @@ class DUTLink(Protocol):
         self.dut = dut
         ...
 
-    def connect(self):
+    def connect(self, port: str, baudrate: int, bytesize: int, parity: str, stopbits: int, xonxoff: bool, rtscts: bool,
+                dsrdtr: bool, read_timeout: float, write_timeout: float):
         ...
 
     def disconnect(self):

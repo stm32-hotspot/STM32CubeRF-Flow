@@ -11,6 +11,8 @@ class DUT(Protocol):
     opcode: OpCode
     packet_indicator: PacketIndicator
     parameter_length: ParameterLength
+    otp_size: int
+    otp_address: int
 
     def __init__(self, baudrate: int, max_hse_tune_value: int):
         self.name = "DUT"

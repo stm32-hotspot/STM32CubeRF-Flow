@@ -240,12 +240,12 @@ class USBLink:
         return self.__read_response_status(self.read_response())
 
     def get_otp_index(self, free_index: bool = False) -> int:
-        otp_area_size = 1024
-        store_address = 0x1FFF7000
+        otp_size = self.dut.otp_size
+        otp_address = self.dut.otp_address
         index = 0
 
-        while index < otp_area_size:
-            self.send_command(self.dut.get_otp_index_command(store_address, index))
+        while index < otp_size:
+            self.send_command(self.dut.get_otp_index_command(otp_address, index))
             if self.read_response()[7:11].hex().upper() == "FFFFFFFF":
                 break
             index += 8
@@ -253,7 +253,7 @@ class USBLink:
         if not free_index:
             index -= 8
 
-        if index >= otp_area_size:
+        if index >= otp_size:
             return -1
 
         return index

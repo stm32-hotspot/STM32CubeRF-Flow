@@ -14,6 +14,8 @@ class BlueNRG_LP:
     opcode: OpCode
     packet_indicator: PacketIndicator
     parameter_length: ParameterLength
+    otp_size: int
+    otp_address: int
 
     def __init__(self, baudrate: int = 921600, max_hse_tune_value: int = 63):
         self.name = "BlueNRG-LP"
