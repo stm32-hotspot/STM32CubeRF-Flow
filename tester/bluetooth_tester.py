@@ -9,7 +9,7 @@ class BluetoothTester(Protocol):
     def disconnect(self):
         ...
 
-    def send_command(self):
+    def send_command(self, command: str):
         ...
 
     def read_response(self) -> str:
